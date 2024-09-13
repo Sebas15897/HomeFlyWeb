@@ -1,3 +1,24 @@
+header{
+    position: relative;
+    z-index: 10000;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Oculto inicialmente */
+    visibility: hidden; /* No visible hasta que se abra el menú */
+    transition: opacity 0.3s ease-in-out;
+}
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 p{
     margin-bottom: 0 !important;
 }
@@ -12,6 +33,7 @@ p{
     margin: auto;
     padding: 15px 5%;
     border-bottom: 1px solid #E5E8EB;
+    background-color: #FFFFFF;
 }
 
 .icon-homefly{
@@ -46,6 +68,8 @@ p{
 
 .profileIcon{
     border-radius: 50%;
+    width: 48px;
+    height: 48px;
 }
 
 .container-secondHeader{
@@ -67,9 +91,9 @@ p{
         border-bottom-right-radius: 1px;
     }
 
+
     img{
-        fill: red;
-        stroke: red;
+        width: 24px;
     }
 
 }
@@ -80,6 +104,10 @@ p{
     font-weight:400;
     outline: none;
     text-decoration: none;
+
+    img{
+        width: 24px;
+    }
 }
 
 .no-phone{

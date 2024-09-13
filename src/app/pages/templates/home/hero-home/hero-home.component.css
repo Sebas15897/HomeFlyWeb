@@ -1,0 +1,116 @@
+.background-image{
+    background: url('../../../../../assets/images/png/backgroundHero.png')center/cover;
+    background-repeat:no-repeat;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 1000px;
+    height: calc(100vh - 150px);
+    min-height: 480px;
+    max-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 40px;
+}
+
+.titleHero{
+    color: #FFFFFF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.descriptionHero{
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+
+.search{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 50%;
+    min-width: max-content;
+}
+
+.input-search{
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    width: 300px;
+    max-width: 70%;
+}
+
+.input-search::placeholder{
+    opacity: 1 !important;
+    color: #3D404A;
+}
+
+.buttonSearch{
+    background-color: #617AFA;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border: 0;
+}
+
+@media (max-width: 840px) {
+    .titleHero{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .input-search{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .background-image{
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .titleHero{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .descriptionHero{
+        text-align: center; 
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .background-image{
+        max-height: 360px;
+        min-height: 360px;
+        padding: 5vw;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .search{
+        padding: 10px;
+    }
+
+    .buttonSearch{
+        padding: 10px 0;
+        width: 20vw;
+    }
+
+    .input-search{
+        width: 40vw;
+        min-width: 40vw;
+        max-width: 40vw;
+        font-size: 14px;
+    }
+}
+
