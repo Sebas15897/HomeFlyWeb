@@ -1,7 +1,7 @@
 <div class="containerSection">
   <h1 class="titleSection">Unique stays</h1>
 
-  <div class="versionPc container-cards d-flex aling-items-center justify-content-start flex-wrap" style="width: 100%;">
+  <div class="container-cards d-flex aling-items-center justify-content-start flex-wrap" style="width: 100%;">
     <div class="card"  *ngFor="let card of visibleCards">
       <img [src]="card.image" alt="">
       <span>{{card.title}}</span>
@@ -11,18 +11,4 @@
     </div>
   </div>
   
-
-  <div class="versionMobile containerSections containerCarrousel" style="position: relative;">
-    <div class="swiper-container swiper-container container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let card of listCards">
-          <div class="cardSlider">
-            <img [src]="card.image" alt="">
-            <span>{{card.title}}</span>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </div>
 </div>

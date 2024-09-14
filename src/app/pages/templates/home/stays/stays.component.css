@@ -55,15 +55,18 @@
     justify-content: center;
 }
 
-.versionMobile{
-    display: none !important;
-}
 
 @media (max-width: 840px) {
 
     .container-cards{
         flex-wrap: nowrap !important;
-        overflow: hidden;
+        overflow: auto;
+        scrollbar-width: none; 
+    }
+
+    
+    .container-cards::--webkit-scrollbar{
+        display: none;
     }
 
     .card{
@@ -76,13 +79,6 @@
         display: none;
     }
 
-    .versionMobile{
-        display: flex !important;
-    }
-
-    .versionPc{
-        display: none !important;
-    }
 }
 
 @media (max-width: 700px) {

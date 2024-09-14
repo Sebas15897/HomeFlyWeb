@@ -12,8 +12,6 @@ export class StaysComponent implements OnInit {
 
   seeMore = true;
   isMobileView: boolean = false;
-  swiperInstanceTeamModern!: Swiper;
-
 
   listCards = [
     {
@@ -79,31 +77,6 @@ export class StaysComponent implements OnInit {
       this.textSeeMore = "See More";
 
       this.seeMore = true;
-    }
-  }
-
-  config: SwiperOptions = {
-    loop: true,
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 10,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: true,
-  };
-
-  ngAfterViewInit() {
-    this.swiperInstanceTeamModern = new Swiper('.swiper-container', this.config);
-  }
-
-  slideNextTeam() {
-    if (this.swiperInstanceTeamModern) {
-      this.swiperInstanceTeamModern.slideNext();
-    }
-  }
-
-  slidePrevTeam() {
-    if (this.swiperInstanceTeamModern) {
-      this.swiperInstanceTeamModern.slidePrev();
     }
   }
 

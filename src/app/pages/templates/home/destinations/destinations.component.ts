@@ -41,6 +41,20 @@ export class DestinationsComponent implements OnInit {
       title: 'Los angeles',
       image: 'assets/images/png/losAngeles.png'
     },
+    {
+      title: 'Los angeles',
+      image: 'assets/images/png/losAngeles.png'
+    },
+    {
+      title: 'Los angeles',
+      image: 'assets/images/png/losAngeles.png'
+    },
+    
+    { 
+      title: 'Los angeles',
+      image: 'assets/images/png/losAngeles.png'
+    },
+    
   ]
 
   visibleCards = this.listCards.slice(0, 8);
@@ -62,7 +76,6 @@ export class DestinationsComponent implements OnInit {
   }
 
   config: SwiperOptions = {
-    loop: true,
     slidesPerView: 4,
     spaceBetween: 10,
     pagination: { el: '.swiper-pagination', clickable: true },
