@@ -5,15 +5,24 @@ import { LayoutComponent } from './pages/templates/layout/layout.component';
 export const routes: Routes = [
     {
         path: '',
-        loadChildren: () =>
-        import('./pages/templates/home/home.module').then(
-            (module) => module.HomeModule
-        ),
-    },
-    {
-        path: '**',
-        redirectTo: 'classic',
-        pathMatch: 'full',
+        component: LayoutComponent, // Usar el componente layout
+        children: [
+            {
+                path: '',
+                loadChildren: () =>
+                import('./pages/templates/home/home.module').then(
+                    (module) => module.HomeModule
+                ),
+            },
+            {
+                path: 'home',
+                loadChildren: () =>
+                import('./pages/templates/home/home.module').then(
+                    (module) => module.HomeModule
+                ),
+            },
+          // Otras rutas
+        ]
     },
 ];
 
