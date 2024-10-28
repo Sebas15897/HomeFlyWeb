@@ -1,0 +1,64 @@
+<header>
+  <div class="container-firstHeader d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center custom-gap-header">
+      <span class="icon-homefly">Homefly</span>
+      <div class="no-phone search d-flex align-items-center" style="column-gap: 15px;">
+        <img src="assets/images/svg/glass.svg" alt="">
+        <input class="input-search" type="text" placeholder="Search">
+      </div>    
+    </div>
+    <div class="no-phone d-flex align-items-center custom-gap-header">
+      <img class="world-img" src="assets/images/svg/world.svg" alt="">
+      <img class="profileIcon" src="assets/images/png/person.png" alt="">
+    </div>
+    <div class="no-desktop" (click)="toggleMenu()">
+      <img
+        [src]="
+          menuOpen
+            ? 'assets/images/svg/close.svg'
+            : 'assets/images/svg/menuClose.svg'
+        "
+        alt=""
+      >
+    </div>
+  </div>
+  <div class="container-secondHeader d-flex justify-content-center align-items-center">
+    <a href="#" class="selected d-flex flex-column align-items-center justify-content-center">
+      <img #miIcono src="assets/images/svg/home.svg" alt="">
+      <p>House</p>
+    </a>
+
+    <a href="#" class="no-selected d-flex flex-column align-items-center justify-content-center">
+      <img src="assets/images/svg/apartment.svg" alt="">
+      <p>Apartmemt</p>
+    </a>
+
+    <a href="#" class="no-selected d-flex flex-column align-items-center justify-content-center">
+      <img src="assets/images/svg/cabin.svg" alt="">
+      <p>Cabin</p>
+    </a>
+
+    <a href="#" class="no-selected d-flex flex-column align-items-center justify-content-center">
+      <img src="assets/images/svg/room.svg" alt="">
+      <p>Room</p>
+    </a>
+  </div>
+
+  <div class="hamburger-menu" [class.hidden]="!menuOpen">
+    <div class="searcher-mobile">
+      <img src="assets/images/svg/glass.svg" alt="">
+      <input class="input-search" type="text" placeholder="Search">
+    </div>
+
+    <div class="d-flex align-items-center justify-content-between ">
+      <div class="profile">
+        <img class="profileIcon" src="assets/images/png/person.png" alt="">
+        <span>Hello, Monica</span>
+      </div>
+      
+      <img class="world-img" src="assets/images/svg/world.svg" alt="">
+    </div>
+    
+  </div>
+</header>
+<div class="overlay" [class.active]="menuOpen"></div>

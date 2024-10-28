@@ -1,0 +1,52 @@
+.containerSection{
+    border: 1px solid #D6D6DE;
+    border-radius: 12px;
+    column-gap: 5%;
+}
+
+.containerMessage{
+    h2{
+        color: #000000;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    span{
+        color: #000000;
+        font-size: 18px;
+    }
+}
+
+.buttonLearnMore{
+    background-color: #617AFA;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 12px;
+    height: max-content;
+
+    p{
+        width: 85px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .containerSection{
+        flex-direction: column;
+        align-items: start !important;
+        justify-content: start !important;
+        row-gap: .5rem;
+    }
+
+    .containerMessage{
+        h2{
+            font-size: 16px;
+        }
+    
+        span{
+            font-size: 16px;
+        }
+    }
+}

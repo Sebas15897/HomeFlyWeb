@@ -1,0 +1,14 @@
+<div class="containerSection">
+  <h1 class="titleSection">Popular destinations</h1>
+
+  <div class="versionPc container-cards d-flex aling-items-center justify-content-start flex-wrap" style="width: 100%;">
+    <div class="card"  *ngFor="let card of visibleCards">
+      <img [src]="card.image" alt="">
+      <span>{{card.title}}</span>
+    </div>
+    <div class="readMore" *ngIf="listCards.length > 8">
+      <p (click)="seeAll()">{{textSeeMore}}</p>
+    </div>
+  </div>
+  
+</div>
